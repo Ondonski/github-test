@@ -14,3 +14,9 @@ jobs:
         run: yarn build
       - name: Setup finish
         run: echo "Hurray!!"
+
+  test-app:
+    needs: build-app
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "YOLO"
